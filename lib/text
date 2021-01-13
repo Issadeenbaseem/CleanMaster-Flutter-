@@ -1,0 +1,58 @@
+Padding(
+        padding: const EdgeInsets.fromLTRB(100, 200, 100, 0),
+        child: Column(
+          children: [
+            Container(
+              height: 250,
+              width: 200,
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(20)),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: Text(
+                      "Online Payment",
+                      style: TextStyle(fontSize: 22, color: Colors.red[300]),
+                    ),
+                  ),
+                  SizedBox(height: 1),
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                      child: Text(
+                        "You Can Pay Through Just One Click",
+                        style: TextStyle(fontSize: 12, color: Colors.grey[300]),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                      controller: textEditingController,
+                      decoration: InputDecoration(
+                        hintText: 'Enter Yor Amount',
+                        border: const OutlineInputBorder(),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                   height: 10,
+                  ),
+                  RaisedButton(
+                    color: Colors.blue,
+                    child: Text(
+                      " Pay Now ",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    onPressed: () {
+                      openCheckout();
+                    },
+                  )
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
